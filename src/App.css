@@ -1,0 +1,21 @@
+.hero {
+	width: 100%;
+	height: 40vh;
+	background-image: url('');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 0.75em 2em;
+}
+
+@media screen and (min-width: 1024px) {
+	.hero {
+		height: 50vh;
+	}
+}
