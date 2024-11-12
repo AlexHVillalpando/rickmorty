@@ -26,19 +26,26 @@ function App() {
 	};
 
 	const onNext = () => {
-		setPage(page + 1);
+		if (page < maxPage) {
+			setPage(page + 1);
+		}
 	};
 
 	return (
 		<>
 			<div className="hero" />
 			<div className="container">
+				<Search setLocationId={setLocationId} />
+				<CardInfo location={location} />
 				<button onClick={onPrev} disabled={page === 1}>
 					Anterior
 				</button>
-				<button onClick={onNext}>Siguiente</button>
-				<Search setLocationId={setLocationId} />
-				<CardInfo location={location} />
+				<span>
+					{page} / {maxPage}
+				</span>
+				<button onClick={onNext} disabled={page === maxPage}>
+					Siguiente
+				</button>
 				<ResidentsList
 					residents={location?.residents}
 					page={page}
