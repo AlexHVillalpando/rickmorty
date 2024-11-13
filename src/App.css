@@ -14,6 +14,62 @@
 	padding: 0 0.75em 2em;
 }
 
+.nav__container {
+	display: flex;
+	height: auto;
+	justify-content: center;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0 0 1rem 0;
+	gap: 1em;
+}
+
+.nav__btn {
+	display: inherit;
+	height: auto;
+	color: #fff;
+	background-color: yellowgreen;
+	border-radius: 8px;
+	padding: 0.3em 1em 0.3em 1em;
+	font-size: 1rem;
+	outline: none;
+}
+
+.nav__btn:enabled,
+.nav__btn[enabled],
+.nav__btn:hover {
+	cursor: pointer;
+}
+
+.nav__btn:disabled,
+.nav__btn[disabled] {
+	background-color: #cccccc;
+	color: #666666;
+	cursor: default;
+}
+
+.nav__list {
+	display: inherit;
+	height: auto;
+	font-size: 1rem;
+}
+
+.contact__btn {
+	width: fit-content;
+	height: fit-content;
+	padding: 0.2em;
+	position: fixed;
+	top: 20vh;
+	left: 0px;
+	border-radius: 0 5px 5px 0;
+	background-color: #66666650;
+}
+
+.bx {
+	color: #fff;
+}
+
 @media screen and (min-width: 1024px) {
 	.hero {
 		height: 50vh;

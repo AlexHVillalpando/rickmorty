@@ -37,20 +37,36 @@ function App() {
 			<div className="container">
 				<Search setLocationId={setLocationId} />
 				<CardInfo location={location} />
-				<button onClick={onPrev} disabled={page === 1}>
-					Anterior
-				</button>
-				<span>
-					{page} / {maxPage}
-				</span>
-				<button onClick={onNext} disabled={page === maxPage}>
-					Siguiente
-				</button>
+				<div className="nav__container">
+					<button className="nav__btn" onClick={onPrev} disabled={page === 1}>
+						Previous
+					</button>
+					<span className="nav__list">
+						{page} / {maxPage}
+					</span>
+					<button
+						className="nav__btn"
+						onClick={onNext}
+						disabled={page === maxPage}
+					>
+						Next
+					</button>
+				</div>
+
 				<ResidentsList
 					residents={location?.residents}
 					page={page}
 					itemsPerPage={itemsPerPage}
 				/>
+				<div className="contact__btn">
+					<a
+						className="contact__link"
+						href="https://github.com/AlexHVillalpando/rickmorty"
+						target="_blank"
+					>
+						<i className="bx bxl-github bx-tada-hover bx-md"></i>
+					</a>
+				</div>
 			</div>
 		</>
 	);
