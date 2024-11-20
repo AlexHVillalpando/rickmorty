@@ -21,7 +21,8 @@ function Search({ setLocationId }) {
 			}, 3000);
 		}
 		setLocationId(id);
-		inputRef.current.value = '';
+		//inputRef.current.value = '';
+		e.target.reset();
 		//e.target.reset() también es válido para resetear el campo del form
 	};
 

@@ -11,8 +11,8 @@ function App() {
 
 	const [page, setPage] = useState(1);
 	const itemsPerPage = 6;
-	const totalItems = location ? location?.residents.length : 0;
-	console.log(totalItems);
+	const totalItems = location ? location?.residents?.length : 0;
+	//console.log(totalItems);
 	const maxPage = Math.ceil(totalItems / itemsPerPage);
 
 	useEffect(() => {
@@ -58,6 +58,7 @@ function App() {
 					page={page}
 					itemsPerPage={itemsPerPage}
 				/>
+
 				<div className="contact__btn">
 					<a
 						className="contact__link"
